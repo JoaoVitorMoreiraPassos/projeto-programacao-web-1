@@ -1,0 +1,537 @@
+:root{
+    --lvl1: #fff;
+    --lvl2: #77181e;
+    --lvl3: #a92727;
+    --lvl4: #c6d6d6;
+    --lvl5: #dee7e7;
+    --lvl6: #fe6c2b;
+    --lvl7: #340016;
+    --background-pattern: #AF4040;
+    --font-color-1: $111;
+    --font-primary: sans-serif;
+    --font-headings: 'Roboto Slab', serif;
+    --spacing-gutter-large: 4rem;
+}
+
+body{
+    background-color: var(--lvl1);
+    color: var(--lvl8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lvl1);
+    color: var(--lvl1);
+    overflow: hidden;
+}
+.trapezoid{
+    background: var(--background-pattern);
+    width: 100%;
+    height: 40rem;
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 0 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex: row;
+    width: 100%;
+    height: 6rem;
+    align-items: center;
+    padding: 0rem 0rem 0rem 0rem;
+    justify-content: space-evenly;
+    background: transparent;
+    left: -10px;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.logo-container a{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.logo-box-up{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight:900;
+    color: white;
+}
+.logo-box-up i{
+    width: 15%;
+    margin-right: 1rem;
+}
+.logo-box-down h2{
+    width: 85%;
+    font-family: var(--font-headings);
+}
+.logo-box-down{
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+}
+.logo-container i{
+    font-size: 2rem;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav li{
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+nav li a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+}
+
+nav li:hover{
+    border: 1.5px solid #fff;
+    border-radius:1rem
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 800px;
+}
+
+.nav-home{
+    border-left: 1.5px solid #fff;
+}
+.nav-contato{
+    border-right: 1.5px solid #fff;
+}
+
+.nav-user{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 10rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid #fff;
+}
+.nav-user i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-user-button{
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cardapio-container{
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    height: 34rem;
+    background-color: transparent;
+    padding: 1rem 0;
+    border-bottom: 1px solid #111;
+}
+.cardapio-descricao{
+    width: 20rem;
+}
+.cardapio-descricao h1{
+    padding: 0;
+    width: 50%;
+}
+.cardapio-descricao-items{
+    display: flex;
+    flex-direction: column;
+    list-style:circle;
+    width: 70%;
+    padding: 2rem;
+}
+.cardapio-imagem {
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem
+}
+.cardapio-imagem img{
+    width: 480px;
+    height: 480px;
+}
+#main_container{
+    top:42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-noticias{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #111;
+    width: 80%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.titulo-noticias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #111;
+    border-radius: 10rem;
+    padding: 0.5rem 1rem;
+}
+
+.cards-conteiner{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    padding: 1rem;
+    width: 100%;
+    height: 35rem;
+    overflow-x: scroll;
+    transition: all 300ms ease-in-out;
+}
+
+.cards-conteiner::-webkit-scrollbar {
+    width: 1px;               
+    height: 10px;
+}
+
+.cards-conteiner::-webkit-scrollbar-track {
+    background: var(--lvl4);        
+}
+
+.cards-conteiner::-webkit-scrollbar-thumb {
+    background-color: var(--background-pattern);   
+    border-radius: 10rem;  
+}
+.card-noticia{
+    list-style: none;
+    padding: 0.5rem 1rem;
+    background: var(--background-pattern);
+    color: var(--lvl1);
+    width: 20rem;
+    margin: 0 1rem;
+    height: 30rem;
+    transition: all 300ms ease-in-out;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+.card-noticia input{
+    display: none;
+}
+.card-noticia:hover{
+    transform: scale(1.05);
+}
+.card-noticia-imagem{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-noticia-imagem img{
+    width: 90%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.card-noticia-descricao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-noticia-descricao h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 0.5rem;
+}
+.card-noticia-descricao p{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0.5rem;
+}
+.card-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    font-size: 0.8rem;
+}
+footer{
+    padding: 0;
+    color: white;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--background-pattern);
+    height: 14rem;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2.5rem;
+    height: 80%;
+}
+.footer-paginas{
+    padding: 0;
+    height: 80%;
+}
+.footer-paginas ul{
+    padding: 0;
+}
+.footer-paginas h4{
+    text-decoration: underline;
+}
+.footer-paginas ul li{
+    list-style: none;
+}
+.footer-paginas ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-projeto{
+    padding: 0;
+    height: 80%;
+}
+.footer-projeto ul{
+    height: 80%;
+    padding: 0;
+}
+.footer-projeto h4{
+    text-decoration: underline;
+}
+.footer-projeto ul li{
+    list-style: none;
+}
+.footer-projeto ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-redes-socias{
+    padding: 0;
+    height: 80%;
+    width: 12rem;
+    text-align: center;
+}
+.footer-redes-socias ul{
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-redes-socias h4{
+    text-decoration: underline;
+}
+.footer-redes-socias ul li{
+    list-style: none;
+    transition: all 300ms ease-in-out;
+}
+.footer-redes-socias ul li:hover{
+    transform: scale(1.2);
+}
+.footer-redes-socias ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+footer p{
+    text-align: center;
+    height: 1rem;
+}
+
+
+
+@media  screen and (max-width: 1200px) {
+    .trapezoid{
+        height: 43rem;
+    }
+    .cardapio-container{
+        height: 36rem;
+    }
+    .cardapio-descricao{
+        width: 20rem
+    }
+    
+}
+
+
+@media  screen and (max-width: 998px) {
+    .logo-box-up{
+        width: 20rem;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .logo-box-down{
+        width: 20rem;
+    }
+    .trapezoid{
+        height: 60rem;
+    }
+    .nav-container{
+        display: none;
+    }
+    .cardapio-container{
+        margin-top: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+        height: 50rem;
+    }
+    .cardapio-descricao-items{
+        width: 18rem;
+        height: 18rem;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .cardapio-imagem img{
+        width: 360px;
+        height: 360px;
+    }
+    .cardapio-descricao h1{
+        font-size: 1.2rem;
+    }
+    .cardapio-descricao-items h3{
+        font-size: 1.1rem;
+    }
+
+    .card-noticia:hover{
+        transform: scale(1);
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 2rem
+    }
+    .footer-paginas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-paginas ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-projeto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-projeto ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 792px){
+    .logo-container{
+        width: 50%;
+        align-items: center;
+    }
+    .logo-container a{
+        width: 100%;
+        align-items: center;
+    }
+    .logo-box-up{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+    .trapezoid{
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    }
+}
