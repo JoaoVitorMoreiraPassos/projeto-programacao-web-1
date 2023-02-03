@@ -153,7 +153,7 @@ nav{
 }
 .nav-contato{
     border-right: 1.5px solid #fff;
-}
+}a
 
 .nav-user{
     margin-left: 1rem;
@@ -162,6 +162,7 @@ nav{
     justify-content: center;
     text-align: center;
     width: 10rem;
+    height: 4rem;
     padding: 0 1rem;
     border-bottom: 1px solid #fff;
 }
@@ -270,46 +271,83 @@ nav{
     padding: 0.5rem 1rem;
 }
 
-.cards-conteiner{
+.move-scroll-container{
+    justify-self: flex-end;
+}
+.move-scroll-left, .move-scroll-right{
+    cursor: pointer;
+    border: 0;
+    border-radius: 10rem;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--background-pattern);
+    transition: all 300ms ease-in-out;
+    
+}
+.move-scroll-left{
+    margin-right: 1rem;
+}
+.move-scroll-left:hover{
+    background-color: var(--lvl3);
+    transform: scale(1.2);
+}
+.move-scroll-right:hover{
+    background-color: var(--lvl3);
+    transform: scale(1.2);
+}
+.cards-container{
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: column;         
     grid-auto-columns: 1fr;
     padding: 1rem;
     width: 100%;
-    height: 35rem;
+    height: 30rem;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    margin-top: -3rem;
+}
+
+.cards-container::-webkit-scrollbar {
+    width: 1px;               
+    height: 10px;
     transition: all 300ms ease-in-out;
 }
 
-.cards-conteiner::-webkit-scrollbar {
-    width: 1px;               
-    height: 10px;
-}
-
-.cards-conteiner::-webkit-scrollbar-track {
+.cards-container::-webkit-scrollbar-track {
+    transition: all 300ms ease-in-out;
     background: var(--lvl4);        
 }
 
-.cards-conteiner::-webkit-scrollbar-thumb {
+.cards-container::-webkit-scrollbar-thumb {
+    transition: all 300ms ease-in-out;
     background-color: var(--background-pattern);   
     border-radius: 10rem;  
 }
 .card-noticia{
     list-style: none;
     padding: 0.5rem 1rem;
-    background: var(--background-pattern);
-    color: var(--lvl1);
+    color: #111;
     width: 20rem;
-    margin: 0 1rem;
-    height: 30rem;
+    height: 25rem;
     transition: all 300ms ease-in-out;
+    margin: 0 0.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.separator{
+    width: 1px;
+    height: 26rem;
+    background-color: #333;
 }
 .card-noticia input{
     display: none;
 }
 .card-noticia:hover{
     transform: scale(1.05);
+    box-shadow: 0 0 10px #111;
 }
 .card-noticia-imagem{
     width: 100%;

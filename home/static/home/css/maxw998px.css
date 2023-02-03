@@ -65,7 +65,9 @@
         width: 360px;
         height: 360px;
     }
-
+    .move-scroll-container{
+        display: none;
+    }
     .card-noticia:hover{
         transform: scale(1);
     }
