@@ -1,0 +1,24 @@
+@media  screen and (max-width: 1200px) {
+    header{
+        width: 100%;
+    }
+    .trapezoid{
+        height: 46rem;
+    }
+    .cardapio-container{
+        top: 0rem;
+        margin-top: 0;
+        align-items: center;
+        height: 44rem;
+    }
+    .cardapio-descricao{
+        width: 20rem;
+    }
+    .cardapio-descricao-items{
+        height: 18rem;
+    }
+    .cardapio-descricao h1{
+        font-size: 45px
+    }
+    
+}
