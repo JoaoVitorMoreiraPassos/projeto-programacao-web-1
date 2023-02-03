@@ -185,7 +185,7 @@ nav{
 .cardapio-container{
     font-family: var(--font-cardapio);
     position: absolute;
-    top: 5rem;
+    top: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -203,10 +203,10 @@ nav{
 .cardapio-descricao h1{
     margin: 0;
     font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 50px;
-line-height: 61px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 61px;
     padding: 0;
     width: 50%;
 }
