@@ -195,7 +195,7 @@ nav{
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
-    height: 39rem;
+    height: 36rem;
     background-color: transparent;
     padding: 1rem 0;
     border-bottom: 1px solid #111;
@@ -255,12 +255,12 @@ nav{
     padding-bottom: 2rem;
     border-bottom: 1px solid #111;
     width: 80%;
-    height: 50rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 
 .titulo-noticias{
@@ -293,11 +293,11 @@ nav{
 }
 .move-scroll-left:hover{
     background-color: var(--lvl3);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .move-scroll-right:hover{
     background-color: var(--lvl3);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .cards-container{
     display: grid;
@@ -310,7 +310,7 @@ nav{
     scroll-behavior: smooth;
     transition: all 300ms ease-in-out;
     -webkit-transition: all 300ms ease-in-out;
-    margin-top: -3rem;
+    margin-top: -1rem;
 }
 
 .cards-container::-webkit-scrollbar {
@@ -331,13 +331,17 @@ nav{
 }
 .card-noticia{
     list-style: none;
-    padding: 0.5rem 1rem;
+    padding: 2rem 1rem;
     color: #111;
     width: 20rem;
     height: 25rem;
     transition: all 300ms ease-in-out;
     margin: 0 0.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .separator{
@@ -353,14 +357,14 @@ nav{
     box-shadow: 0 0 10px #111;
 }
 .card-noticia-imagem{
-    width: 100%;
-    height: 8rem;
+    width: 267px;
+    height: 191px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card-noticia-imagem img{
-    width: 90%;
+    width: 100%;
     height: 100%;
     border-radius: 0.5rem;
 }
@@ -372,24 +376,29 @@ nav{
     justify-content: center;
 }
 .card-noticia-descricao h2{
+    height: .5rem;
     font-size: 1.5rem;
-    font-weight: 900;
+    font-weight: 500;
     text-align: center;
     padding: 0.5rem;
 }
 .card-noticia-descricao p{
-    font-size: 1rem;
+    font-size: 18px;
+    font-weight: 400;
     text-align: justify;
     padding: 0.5rem;
 }
 .card-date{
+    position: relative;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 2rem;
-    font-size: 0.8rem;
+    font-size: 18px;
+    font-weight: 400;
 }
 footer{
     padding: 0;
