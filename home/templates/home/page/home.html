@@ -2,7 +2,6 @@
 
 {%include "home/partials/head.html"%}
 <body>
-    
     <div class="header-container">
         <div class="trapezoid">
             {%include "home/partials/header.html"%}
@@ -11,8 +10,8 @@
             {%include "home/partials/cardapio.html"%}
         </div>
     </div>
+    {% include "home/partials/menu.html" %}
     <div id="main_container">
-
         <section id="main_notices" class="main-noticias">
             <h1 class="titulo-noticias">Principais notícias</h1>
             <div class="move-scroll-container">
@@ -53,10 +52,9 @@
                 {%include "home/partials/cards.html"%}
             </ul>
         </section>
-        
     </div>
 
     {%include "home/partials/footer.html"%}
-    <script src={%static "/home/js/script.js"%}></script>
 </body>
+
 </html>
