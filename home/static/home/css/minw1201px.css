@@ -5,9 +5,8 @@
     --lvl4: #c6d6d6;
     --lvl5: #dee7e7;
     --lvl6: #fe6c2b;
-    --lvl7: #340016;
     --background-pattern: #AF4040;
-    --background-menu: #7fb8b0;
+    --background-menu: #340016;
     --font-headings: 'Fredoka One';
     --font-pattern: 'Inter';
     --font-cardapio: 'JetBrains Mono';
@@ -51,6 +50,9 @@ i{
     height: 2px;
     background-color: #fff;
     margin: 0.2rem 0;
+}
+.menu-options{
+    display: none;
 }
 .header-container{
     width: 100%;
