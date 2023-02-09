@@ -1,17 +1,15 @@
 try{
     document.getElementById("button-open-menu").addEventListener("click", () => {
-        document.getElementById("menu-mobile").style.display = "block";
         document.getElementById("button-open-menu").style.display = "none";
-        document.getElementById("menu-mobile").style.width = "100vh";
-        // document.getElementById("menu-mobile").style.height = "100vh";
+        document.getElementById("menu-mobile").style.display = "block";
+        document.getElementById("menu-mobile").style.width = "100%";
         document.getElementById("main_container").style.display = "none";
     })
 }catch{alert("error")}
 document.getElementById("close-mobile-menu").addEventListener("click", () => {
     document.getElementById("menu-mobile").style.width = "0vh";
-    // document.getElementById("menu-mobile").style.height = "0vh";
     document.getElementById("main_container").style.display = "flex";
-    document.getElementById("button-open-menu").style.display = "block";
+    document.getElementById("button-open-menu").style.display = "flex";
 })
 
 try{
