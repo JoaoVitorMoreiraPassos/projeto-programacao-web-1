@@ -20,5 +20,7 @@
     .cardapio-descricao h1{
         font-size: 45px
     }
-    
+    .description-image img{
+        height: 53.75rem;
+    }
 }
