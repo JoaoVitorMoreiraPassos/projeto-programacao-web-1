@@ -1,83 +1,26 @@
 {%load static%}
 
 {%include "partials/head.html"%}
+
 <body>
     <div class="header-container">
         <div class="trapezoid">
             {%include "partials/header.html"%}
         </div>
-        <div class="cardapio-container">
-            {%include "home/partials/cardapio.html"%}
+        <div class="description-container">
+            {%include "sobre/partials/description.html"%}
         </div>
     </div>
     {% include "partials/menu.html" %}
     <div id="main_container">
-        <section id="main_notices" class="main-noticias">
-            <h1 class="titulo-noticias">Principais notícias</h1>
-            <div class="move-scroll-container">
-                <button id="move-scroll-left" class="move-scroll-left">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="move-scroll-right" class="move-scroll-right">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+       <section class="devs-container">
+            <h1>Quem Somos</h1>
+            <div class="dev-cards">
+                {%include "sobre/partials/devs_card.html"%}
+                {%include "sobre/partials/devs_card.html"%}
+                {%include "sobre/partials/devs_card.html"%}
             </div>
-            <ul class="cards-container " id="cards-container">
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-            </ul>
-        </section>
+       </section>
     </div>
 
     {%include "partials/footer.html"%}
