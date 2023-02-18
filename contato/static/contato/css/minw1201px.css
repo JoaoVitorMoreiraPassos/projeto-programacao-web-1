@@ -1,5 +1,6 @@
-* {
-    font-family: var(--font-pattern);
+.nav-contato {
+    border: 1.5px solid #fff;
+    border-radius: 1rem;
 }
 
 input::placeholder {
@@ -7,7 +8,7 @@ input::placeholder {
 }
 
 .duvidas-container {
-    font-family: var(--font-cardapio);
+    font-family: var(--font-pattern);
     position: absolute;
     top: 8rem;
     display: flex;
