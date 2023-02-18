@@ -1,0 +1,32 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {%include "partials/head.html"%}
+    <link rel="stylesheet" href={% static 'contato/css/minw1201px.css' %}>
+    {% comment %} <link rel="stylesheet" href={% static 'contato/css/maxw1200px.css' %}>
+    <link rel="stylesheet" href={% static 'contato/css/maxw998px.css' %}> {% endcomment %}
+
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="trapezoid">
+            {%include "partials/header.html"%}
+        </div>
+        <div class="duvidas-container">
+            {%include "contato/partials/duvidas.html"%}
+        </div>
+    </div>
+    {% include "partials/menu.html" %}
+    <div id="main_container">
+        {%include "contato/partials/formulario.html" %}
+    </div>
+
+    {%include "partials/footer.html"%}
+    <script src={%static "/home/js/script.js"%}></script>
+</body>
+
+</html>

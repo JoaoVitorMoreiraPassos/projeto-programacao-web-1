@@ -1,0 +1,233 @@
+* {
+    font-family: var(--font-pattern);
+}
+
+input::placeholder {
+    color: var(--background-pattern)
+}
+
+.duvidas-container {
+    font-family: var(--font-cardapio);
+    position: absolute;
+    top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+    height: 35rem;
+    background-color: transparent;
+    padding: 1rem 0;
+    border-bottom: 1px solid #111;
+}
+
+.pesquisa-container {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa-container h1 {
+    width: 30rem;
+    height: 3rem;
+    font-family: var(--font-headings);
+    font-size: 50px;
+    line-height: 85px;
+    text-align: center;
+}
+
+.duvidas-pesquisa {
+    background: #DFD4D4;
+    height: 2.5rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 10rem;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #fff;
+}
+
+.duvidas-pesquisa:focus-within {
+    border: 2px solid orange;
+    background: #fff;
+}
+
+.duvida-input {
+    width: 90%;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    background: transparent;
+}
+
+.duvida-button {
+    width: 15%;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+
+.duvida-button:hover {
+    background-color: var(--background-menu);
+    color: #fff;
+    border-radius: 0 10rem 10rem 0;
+}
+
+.duvida-button i {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--background-pattern)
+}
+
+.sugestions {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sugestion {
+    cursor: pointer;
+    font-size: 18px;
+    list-style: none;
+    padding: 0rem 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 10rem;
+}
+
+.duvida-image {
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem
+}
+
+.duvida-image img {
+    width: 350px;
+    height: 408px;
+}
+
+.form-container {
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form {
+    width: 30rem;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-lateral {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 83%;
+}
+
+.form-telefone {
+    background: #DFD4D4;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+    border-radius: 10rem;
+    border: none;
+    outline: none;
+    width: 43%;
+    transition: all 300ms ease-in-out;
+}
+
+.form-telefone:focus {
+    border: 1px solid orange;
+    background-color: #fff;
+}
+
+.form-topico:focus {
+    border: 1px solid orange;
+    background-color: #fff;
+}
+
+.form-topico {
+    background: #DFD4D4;
+    color: var(--background-pattern);
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 0 1.5em;
+    border: 1px;
+    border-radius: 10rem;
+    width: 43%;
+    transition: all 300ms ease-in-out;
+}
+
+.form-description {
+    height: 10rem;
+    width: 75%;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    background: #DFD4D4;
+    transition: all 300ms ease-in-out;
+    outline: none;
+}
+
+.form-description:focus {
+    border: 1px solid orange;
+}
+
+textarea::placeholder {
+    color: var(--background-pattern);
+}
+
+.submit-area {
+    width: 83%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.submit-area button {
+    height: 2.5rem;
+    background-color: var(--background-pattern);
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-area button:hover {
+    background-color: #8d4141;
+    color: #fff;
+}
