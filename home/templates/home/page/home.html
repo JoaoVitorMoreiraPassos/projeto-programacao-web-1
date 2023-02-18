@@ -1,86 +1,94 @@
 {%load static%}
 
-{%include "partials/head.html"%}
-<body>
-    <div class="header-container">
-        <div class="trapezoid">
-            {%include "partials/header.html"%}
-        </div>
-        <div class="cardapio-container">
-            {%include "home/partials/cardapio.html"%}
-        </div>
-    </div>
-    {% include "partials/menu.html" %}
-    <div id="main_container">
-        <section id="main_notices" class="main-noticias">
-            <h1 class="titulo-noticias">Principais notícias</h1>
-            <div class="move-scroll-container">
-                <button id="move-scroll-left" class="move-scroll-left">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="move-scroll-right" class="move-scroll-right">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            <ul class="cards-container " id="cards-container">
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-                <div class="separator" >
-                    <div></div>
-                </div>
-                {%include "home/partials/cards.html"%}
-            </ul>
-        </section>
-    </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {%include "partials/head.html"%}
+        <link rel="stylesheet" href={% static 'home/css/minw1201px.css' %}>
+        <link rel="stylesheet" href={% static 'home/css/maxw1200px.css' %}>
+        <link rel="stylesheet" href={% static 'home/css/maxw998px.css' %}>
 
-    {%include "partials/footer.html"%}
-    <script src={%static "/home/js/script.js"%}></script>
-</body>
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="trapezoid">
+                {%include "partials/header.html"%}
+            </div>
+            <div class="cardapio-container">
+                {%include "home/partials/cardapio.html"%}
+            </div>
+        </div>
+        {% include "partials/menu.html" %}
+        <div id="main_container">
+            <section id="main_notices" class="main-noticias">
+                <h1 class="titulo-noticias">Principais notícias</h1>
+                <div class="move-scroll-container">
+                    <button id="move-scroll-left" class="move-scroll-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="move-scroll-right" class="move-scroll-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <ul class="cards-container " id="cards-container">
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                    <div class="separator" >
+                        <div></div>
+                    </div>
+                    {%include "home/partials/cards.html"%}
+                </ul>
+            </section>
+        </div>
+
+        {%include "partials/footer.html"%}
+        <script src={%static "/home/js/script.js"%}></script>
+    </body>
 </html>
