@@ -367,7 +367,6 @@ nav{
 }
 .devs-container{
     margin-top: 5rem;
-    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -395,11 +394,12 @@ nav{
 }
 
 .dev-card{
+    margin-top: 4em;
     list-style: none;
     padding: 2rem 1rem;
     color: #111;
     width: 15rem;
-    height: 25rem;
+    height: 35rem;
     transition: all 300ms ease-in-out;
     margin: 0 0.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
@@ -409,8 +409,8 @@ nav{
     justify-content: space-around;
 }
 .dev-card img{
-    width: 10rem;
-    height: 12rem;
+    width: 12rem;
+    height: 15rem;
     border-radius: 50%;
 }
 
@@ -421,7 +421,13 @@ nav{
     justify-content: space-evenly;
     text-align: center;
 }
-
+.dev-infos i{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 3rem;
+    color: var(--background-pattern)
+}
 .cards-container::-webkit-scrollbar {
     width: 1px;               
     height: 10px;
