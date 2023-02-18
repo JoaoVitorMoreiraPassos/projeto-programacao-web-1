@@ -1,0 +1,14 @@
+@media screen and (max-width: 998px) {
+    .description-text {
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+    }
+    .description-image {
+        top: 5rem;
+    }
+    .description-image img {
+        height: 192%;
+        clip-path: polygon(100% 0%, 100% 0%, 100% 67%, 0 67%);
+    }
+}

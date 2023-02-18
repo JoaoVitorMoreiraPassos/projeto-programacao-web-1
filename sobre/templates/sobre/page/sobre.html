@@ -1,29 +1,35 @@
 {%load static%}
 
-{%include "partials/head.html"%}
-
-<body>
-    <div class="header-container">
-        <div class="trapezoid">
-            {%include "partials/header.html"%}
-        </div>
-        <div class="description-container">
-            {%include "sobre/partials/description.html"%}
-        </div>
-    </div>
-    {% include "partials/menu.html" %}
-    <div id="main_container">
-       <section class="devs-container">
-            <h1>Quem Somos</h1>
-            <div class="dev-cards">
-                {%include "sobre/partials/devs_card.html"%}
-                {%include "sobre/partials/devs_card.html"%}
-                {%include "sobre/partials/devs_card.html"%}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {%include "partials/head.html"%}
+        <link rel="stylesheet" href={% static 'sobre/css/minw1201px.css' %}>
+        <link rel="stylesheet" href={% static 'sobre/css/maxw1200px.css' %}>
+        <link rel="stylesheet" href={% static 'sobre/css/maxw998px.css' %}>
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="trapezoid">
+                {%include "partials/header.html"%}
             </div>
-       </section>
-    </div>
+            <div class="description-container">
+                {%include "sobre/partials/description.html"%}
+            </div>
+        </div>
+        {% include "partials/menu.html" %}
+        <div id="main_container">
+        <section class="devs-container">
+                <h1>Quem Somos</h1>
+                <div class="dev-cards">
+                    {%include "sobre/partials/devs_card.html"%}
+                    {%include "sobre/partials/devs_card.html"%}
+                    {%include "sobre/partials/devs_card.html"%}
+                </div>
+        </section>
+        </div>
 
-    {%include "partials/footer.html"%}
-    <script src={%static "/home/js/script.js"%}></script>
-</body>
+        {%include "partials/footer.html"%}
+        <script src={%static "/home/js/script.js"%}></script>
+    </body>
 </html>
