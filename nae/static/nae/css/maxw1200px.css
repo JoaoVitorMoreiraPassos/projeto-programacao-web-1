@@ -1,0 +1,21 @@
+@media screen and (max-width: 1200px) {
+    .description-container {
+        top: 0rem;
+        margin-top: 0;
+        align-items: center;
+        height: 44rem;
+    }
+    .description {
+        width: 20rem;
+    }
+    .description-items {
+        height: 18rem;
+    }
+    .description h1 {
+        font-size: 45px
+    }
+    .description-imagem img {
+        height: 550px;
+        width: calc(550px - 66px)
+    }
+}
