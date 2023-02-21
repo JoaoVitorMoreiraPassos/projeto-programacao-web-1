@@ -27,8 +27,12 @@ SECRET_KEY = get_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.180.44.2", "0.0.0.0",
-                 "localhost", "127.0.0.1", "10.180.47.244"]
+ALLOWED_HOSTS = ["10.180.44.2",
+                 "0.0.0.0",
+                 "localhost",
+                 "127.0.0.1",
+                 "10.180.47.244",
+                 "192.168.1.12"]
 
 
 # Application definition
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'sobre.apps.SobreConfig',
     'contato.apps.ContatoConfig',
+    'nae.apps.NaeConfig',
 ]
 
 MIDDLEWARE = [
