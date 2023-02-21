@@ -9,13 +9,14 @@
     <link rel="stylesheet" href={% static 'contato/css/maxw1200px.css' %}>
     <link rel="stylesheet" href={% static 'contato/css/maxw998px.css' %}>
     <link rel="stylesheet" href={% static 'contato/css/maxw830px.css' %}>
+    <link rel="stylesheet" href={% static 'contato/css/maxw490px.css' %}>
 
 </head>
 
 <body>
     <div class="header-container">
+        {%include "partials/header.html"%}
         <div class="trapezoid">
-            {%include "partials/header.html"%}
         </div>
         <div class="duvidas-container">
             {%include "contato/partials/duvidas.html"%}
