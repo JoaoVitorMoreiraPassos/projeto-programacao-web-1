@@ -23,9 +23,12 @@
         <section class="devs-container">
                 <h1>Quem Somos</h1>
                 <div class="dev-cards">
-                    {%include "sobre/partials/devs_card.html"%}
-                    {%include "sobre/partials/devs_card.html"%}
-                    {%include "sobre/partials/devs_card.html"%}
+                    {% for dev in devs %}
+                        {%include "sobre/partials/devs_card.html"%}
+                    {% if dev.last is not True%}
+                        <div class="separator"></div>
+                    {% endif%}
+                    {% endfor %}
                 </div>
         </section>
         </div>

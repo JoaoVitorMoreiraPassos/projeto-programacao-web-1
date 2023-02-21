@@ -46,6 +46,10 @@
     padding: 2rem 0;
 }
 
+.separator {
+    display: none;
+}
+
 .dev-cards {
     font-family: var(--font-pattern);
     display: flex;

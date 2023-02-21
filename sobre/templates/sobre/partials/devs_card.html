@@ -1,10 +1,13 @@
+{% load static %}
+
 <div class="dev-card">
 
-    <img src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
+
+    <img src={% static  dev.way %} alt="" srcset="">
 
     <div class="dev-infos">
 
-        <h4>Nome do dev</h4>
+        <h4>{{ dev.nome }}</h4>
 
         <p>
             Cursando Sistemas de Informação na Universidade Federal do Piauí
