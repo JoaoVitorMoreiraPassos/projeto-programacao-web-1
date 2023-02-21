@@ -25,3 +25,12 @@
         font-weight: 900;
     }
 }
+
+@media screen and (max-width: 719px) {
+    .separator {
+        display: block;
+        width: 90%;
+        height: .5px;
+        background: #111;
+    }
+}
