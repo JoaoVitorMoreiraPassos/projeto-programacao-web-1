@@ -79,8 +79,11 @@ input::placeholder {
 
 .duvida-button:hover {
     background-color: var(--background-menu);
-    color: #fff;
     border-radius: 0 10rem 10rem 0;
+}
+
+.duvida-button:hover i {
+    color: #fff;
 }
 
 .duvida-button i {
@@ -183,7 +186,7 @@ input::placeholder {
 .form-topico {
     background: #DFD4D4;
     color: var(--background-pattern);
-    height: 2.5rem;
+    height: 2.75rem;
     font-size: 1.2rem;
     padding: 0 1.5em;
     border: 1px;
@@ -192,9 +195,6 @@ input::placeholder {
     transition: all 300ms ease-in-out;
     border: 2px solid #B7B5B5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /* appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; */
 }
 
 .form-description {
