@@ -1,0 +1,53 @@
+@media screen and (max-width: 998px) {
+    .description-container {
+        margin-top: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+        height: 51rem;
+        padding-bottom: 5rem;
+    }
+    .description {
+        align-items: center;
+    }
+    .description-items {
+        margin-left: 1.5rem;
+        width: 20rem;
+        height: 18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .description h1 {
+        width: 100%;
+        font-size: 2.3rem;
+        text-align: center;
+    }
+    .description-items h3 {
+        font-size: 1.7rem;
+        padding-left: 1.7rem;
+    }
+    .description-imagem img {
+        width: 550px;
+        height: calc(550px - 66px);
+    }
+    .notices-header {
+        width: 100%;
+    }
+    .duvidas-pesquisa {
+        width: 15rem;
+    }
+    .duvida-button {
+        padding: 0 1.5rem;
+    }
+    .move-scroll-container {
+        display: none;
+    }
+    .card-noticia:hover {
+        transform: scale(1);
+    }
+}
