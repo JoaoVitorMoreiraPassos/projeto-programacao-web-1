@@ -29,13 +29,12 @@
 }
 
 .description-image img {
-    clip-path: polygon(60% 0%, 100% 0%, 100% 67%, 0 67%);
-    height: 52.25rem;
+    height: 100%;
     width: 100%;
 }
 
 .devs-container {
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

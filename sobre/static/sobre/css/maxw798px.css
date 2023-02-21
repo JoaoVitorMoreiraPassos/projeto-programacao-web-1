@@ -1,0 +1,27 @@
+@media screen and (max-width: 798px) {
+    .trapezoid {
+        height: 40rem;
+        display: flex;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        align-items: center;
+        justify-content: center;
+    }
+    .description-image {
+        width: 0px;
+        height: 0px;
+        display: none;
+    }
+    .description-container {
+        padding-top: 0;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .description-text {
+        position: relative;
+        left: 0rem;
+        margin: 0 auto;
+        font-weight: 900;
+    }
+}
