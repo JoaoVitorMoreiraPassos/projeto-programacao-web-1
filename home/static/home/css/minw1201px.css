@@ -89,7 +89,12 @@
 }
 
 .move-scroll-container {
+    width: 90%;
     justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .move-scroll-left,
