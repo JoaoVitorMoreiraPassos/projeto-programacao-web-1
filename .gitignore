@@ -1,5 +1,4 @@
 # Django #
-settings.py
 *.log
 *.pot
 *.pyc
@@ -124,3 +123,4 @@ env
 .DS_Store
 local_settings.py
 _local_settings.py
+get_key.py
