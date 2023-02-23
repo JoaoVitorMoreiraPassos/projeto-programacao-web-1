@@ -229,6 +229,50 @@ nav {
     width: 100%;
 }
 
+.move-scroll-container {
+    width: 90%;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.move-scroll-left,
+.move-scroll-right {
+    cursor: pointer;
+    border: 0;
+    border-radius: 10rem;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--background-pattern);
+    transition: all 300ms ease-in-out;
+}
+
+.move-scroll-left {
+    margin-right: 1rem;
+}
+
+.move-scroll-left:hover {
+    background-color: var(--lvl3);
+    transform: scale(1.1);
+}
+
+.move-scroll-right:hover {
+    background-color: var(--lvl3);
+    transform: scale(1.1);
+}
+
+.move-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.move-disabled:hover {
+    transform: scale(1);
+}
+
 footer {
     font-family: var(--font-headings);
     padding: 0;
