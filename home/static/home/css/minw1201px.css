@@ -88,41 +88,6 @@
     padding: 0.5rem 1rem;
 }
 
-.move-scroll-container {
-    width: 90%;
-    justify-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.move-scroll-left,
-.move-scroll-right {
-    cursor: pointer;
-    border: 0;
-    border-radius: 10rem;
-    outline: none;
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--background-pattern);
-    transition: all 300ms ease-in-out;
-}
-
-.move-scroll-left {
-    margin-right: 1rem;
-}
-
-.move-scroll-left:hover {
-    background-color: var(--lvl3);
-    transform: scale(1.1);
-}
-
-.move-scroll-right:hover {
-    background-color: var(--lvl3);
-    transform: scale(1.1);
-}
-
 .cards-container {
     display: grid;
     grid-auto-flow: column;
@@ -138,6 +103,7 @@
 }
 
 .cards-container::-webkit-scrollbar {
+    display: none;
     width: 1px;
     height: 10px;
     transition: all 300ms ease-in-out;

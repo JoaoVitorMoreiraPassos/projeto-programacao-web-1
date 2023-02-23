@@ -8,7 +8,7 @@
         <link rel="stylesheet" href={% static 'nae/css/maxw1200px.css' %}>
         <link rel="stylesheet" href={% static 'nae/css/maxw998px.css' %}>
         <link rel="stylesheet" href={% static 'nae/css/maxw750px.css' %}>
-
+        <title>NAE</title>
     </head>
     <body>
         <div class="header-container">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="move-scroll-container">
-                    <button id="move-scroll-left" class="move-scroll-left">
+                    <button id="move-scroll-left" class="move-scroll-left move-disabled">
                         <i class="fas fa-chevron-left"></i>
                     </button>
                     <button id="move-scroll-right" class="move-scroll-right">
@@ -98,6 +98,6 @@
         </div>
 
         {%include "partials/footer.html"%}
-        <script src={%static "/home/js/script.js"%}></script>
+        <script src={%static "/global/js/script.js"%}></script>
     </body>
 </html>
