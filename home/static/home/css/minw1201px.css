@@ -4,7 +4,7 @@
 }
 
 .cardapio-container {
-    font-family: var(--font-cardapio);
+    font-family: var(--font-pattern);
     position: absolute;
     top: 8rem;
     display: flex;
@@ -24,7 +24,7 @@
 
 .cardapio-descricao h1 {
     margin: 0;
-    font-family: 'Inter';
+    font-family: var(--font-pattern);
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -206,4 +206,45 @@
     height: 2rem;
     font-size: 18px;
     font-weight: 400;
+}
+
+.CookieMessage {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #121212;
+    z-index: 999;
+    display: none;
+}
+
+.CookieMessage-content {
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.CookieMessage-content a {
+    color: white;
+}
+
+.CookieMessage-content p {
+    margin: 0 0 20px 0;
+}
+
+.CookieMessage-button {
+    background: #00C2FF;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.CookieMessage-button:hover {
+    background: #5cd9ff;
 }

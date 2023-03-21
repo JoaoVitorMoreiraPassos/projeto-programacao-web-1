@@ -169,10 +169,11 @@ nav li a {
 
 nav li:hover {
     border: 1.5px solid #fff;
-    border-radius: 1rem
+    border-radius: 1rem;
 }
 
 nav {
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -317,7 +318,7 @@ footer {
 
 .footer-paginas ul li a {
     font-size: 18px;
-    font-weight: 300;
+    /* font-weight: 100; */
     color: #fff;
     text-decoration: none;
 }
@@ -339,14 +340,12 @@ footer {
 }
 
 .footer-projeto ul li {
-    font-weight: 300;
     list-style: none;
 }
 
 .footer-projeto ul li a {
     font-size: 18px;
     color: #fff;
-    font-weight: 50;
     text-decoration: none;
 }
 
