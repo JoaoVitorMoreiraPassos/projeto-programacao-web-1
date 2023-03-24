@@ -1,0 +1,71 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {%include "partials/head.html"%}
+    <link rel="stylesheet" href={% static 'login/css/minw1201px.css' %}>
+</head>
+
+<body>
+    <div class=" container">
+        <section class="section create-account" id="create-account">
+            <h1>Crie uma Conta</h1>
+            <form>
+            <input type="text" name="nome" id="nome" class="nome-input" placeholder="Seu nome">
+            <input type="email" name="email" id="email" class="email-input" placeholder="Seu email">
+            <input type="password" name="senha" id="senha" class="senha-input" placeholder="Sua senha">
+            <button class="confirm-button">Cadastrar</button>
+            </form>
+            <div class="div-ou">
+                <div class="horizontal-line"></div>
+                <p>ou</p>
+                <div class="horizontal-line"></div>
+            </div>
+            <div class="icons">
+                <i class="fab fa-facebook-f icon"></i>
+                <i class="fab fa-google-plus-g icon"></i>
+                <i class="fab fa-linkedin-in icon"></i>
+            </div>
+        </section>
+        <section class="section signin" id="signin">
+            <h1>Entrar</h1>
+            <form>
+            <input type="email" name="email" id="email" class="email-input" placeholder="Seu email">
+            <input type="password" name="senha" id="senha" class="senha-input" placeholder="Sua senha">
+            <button class="confirm-button">Confirmar</button>
+            </form>
+            <div class="div-ou">
+                <div class="horizontal-line"></div>
+                <p>ou</p>
+                <div class="horizontal-line"></div>
+            </div>
+            <div class="icons">
+                <i class="fab fa-facebook-f icon"></i>
+                <i class="fab fa-google-plus-g icon"></i>
+                <i class="fab fa-linkedin-in icon"></i>
+            </div>
+        </section>
+        <section class="section welcome-back back-red" id="welcome-back">
+            <div class="section-logo">
+                <i class="fas fa-book"></i>
+                <h3>INFO UFPI</h3>
+            </div>
+            <h1>Olá, Estudante!</h1>
+            <button class="switch-signin">Sign In</button>
+        </section>
+        <section class="section hello back-red" id="hello">
+            <div class="section-logo">
+                <i class="fas fa-book"></i>
+                <h3>INFO UFPI</h3>
+            </div>
+            <h1>Olá, Estudante!</h1>
+            <p>Ainda não possui uma conta?</p>
+            <button class="switch-signup">Sign Up</button>
+        </section>
+    </div>
+    <script src={% static 'login/js/script.js' %}></script>
+</body>
+
+</html>
