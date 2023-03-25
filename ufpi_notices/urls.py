@@ -23,4 +23,5 @@ urlpatterns = [
     path('contato/', include('contato.urls')),
     path('', include('login.urls')),
     path('', include('nae.urls')),
+    path('', include('noticia.urls')),
 ]

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'contato.apps.ContatoConfig',
     'nae.apps.NaeConfig',
     'login.apps.LoginConfig',
+    'noticia.apps.NoticiaConfig',
 ]
 
 MIDDLEWARE = [
