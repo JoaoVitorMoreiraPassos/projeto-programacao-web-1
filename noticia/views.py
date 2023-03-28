@@ -6,7 +6,8 @@ from django.shortcuts import render
 def noticia(request):
 
     noticia = {
-        'titulo': 'Calouros do período 2023.1 tem até o final de Abril para matrículas',
+        'titulo': '''Calouros do período 2023.1 tem até o final de Abril para 
+matrículas''',
         'autor': 'João da Silva',
         'data': '2023-03-22',
         'categoria': 'Matrículas',
