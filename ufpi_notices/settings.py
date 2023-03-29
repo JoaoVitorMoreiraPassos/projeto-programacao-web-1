@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'nae.apps.NaeConfig',
     'login.apps.LoginConfig',
     'noticia.apps.NoticiaConfig',
+    'galeria.apps.GaleriaConfig',
 ]
 
 MIDDLEWARE = [
