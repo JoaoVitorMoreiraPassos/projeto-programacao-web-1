@@ -7,7 +7,7 @@ def nae(request):
 
     noticias = [
         {
-            'titulo': 'Abertura EditalBolsa BAE',
+            'titulo': 'Abertura Edital Bolsa BAE',
             'imagem': 'nae/img/image 2.png',
             'descricao': '''Bolsa de Auxílio Estudantil (BAE),
 foi aberta no ano de 2023 para que novos alunos possam concorrer
