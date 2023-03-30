@@ -33,85 +33,16 @@
                     </button>
                 </div>
                 <ul class="cards-container " id="cards-container">
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
-                    <li>
-                    <div class="separator">
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "home/partials/cards.html"%}
+                    {% for noticia in noticias %}
+                        {%include "home/partials/cards.html"%}
+                        {% if noticia.last is not True %}
+                            <li>
+                                <div class="separator">
+                                    <div></div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %}                    
                 </ul>
             </section>
         </div>

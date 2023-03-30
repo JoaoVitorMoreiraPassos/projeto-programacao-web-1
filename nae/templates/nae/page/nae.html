@@ -40,85 +40,16 @@
                     </button>
                 </div>
                 <ul class="cards-container " id="cards-container">
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
-                    <li>
-                    <div class="separator" >
-                        <div></div>
-                    </div>
-                </li>
-                    {%include "nae/partials/notices.html"%}
+                    {% for noticia in noticias %}
+                        {%include "home/partials/cards.html"%}
+                        {% if noticia.last is not True %}
+                            <li>
+                                <div class="separator">
+                                    <div></div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %} 
                 </ul>
             </section>
         </div>

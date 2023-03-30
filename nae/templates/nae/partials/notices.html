@@ -2,17 +2,16 @@
 
 <li class="card-noticia">
   <div class="card-noticia-imagem">
-    <img src={% static "/nae/img/image 2.png"%} alt="">
+    <img src={% static noticia.imagem %} alt="">
   </div>
   <div class="card-noticia-descricao">
-    <h2>Titulo da notícia</h2>
+    <h2>{{ noticia.titulo }}</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+      {{ noticia.descricao }}
     </p>
   </div>
   <div class="card-date">
-    <p>publicado há xx horas</p>
-    <p>12/12/2021</p>
+    <p>{{ noticia.tempo }}</p>
+    <p>{{ noticia.data }} </p>
   </div>
 </li>

@@ -106,6 +106,7 @@ input {
     border: 2px solid #B7B5B5;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 100;
 }
 
 input::placeholder {
