@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href={% static 'noticia/css/minw1201px.css' %}>
+    {% include "bases/partials/head.html" %}
+    <title>Ufpi Noticias | Noticia</title>
+</head>
+
+<body>
+    <div class="header-container">
+        {%include "bases/partials/header.html"%}
+    </div>
+    {% include "bases/partials/menu.html" %}
+    <div id="main_container" class="container">
+        <div class="titulo">
+            <h1>{{ noticia.titulo }}</h1>
+        </div>
+        <div class="postagem-infos">
+            <p>
+                {{ noticia.autor }}
+            </p>
+            |
+            <p>
+                {{ noticia.data }}
+            </p>
+            |
+            <p>
+                {{ noticia.categoria }}
+            </p>
+        </div>
+        <div class="imagem">
+            <img src="{% static noticia.imagem %}" alt="">
+        </div>
+        <div class="conteudo">
+            {% for paragrafo in noticia.conteudo %}
+            <p>
+                {{ paragrafo }}
+            </p>
+            {% endfor %}
+        </div>
+
+        <div class="comentarios-container">
+            <div class="comentarios">
+                <h3>Comentários</h3>
+                {% for comentario in comentarios %}
+                <div class="comentario">
+                    <ul>
+                        <li>
+                            <p>{{ comentario.data }}</p>
+                            <p>{{ comentario.nome }} disse:</p>
+                            <ul>
+                                <li>
+                                    - {{ comentario.conteudo }}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+            <form method="POST" class="comentario-form">
+                <input type="text" name="comentario" id="comentario" placeholder="Seu comentario" required>
+                <div class="comentario-form-button">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    {% include "bases/partials/footer.html" %}
+</body>
+
+</html>

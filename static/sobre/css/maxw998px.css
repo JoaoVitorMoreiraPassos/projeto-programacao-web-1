@@ -1,0 +1,14 @@
+@media screen and (max-width: 998px) {
+    .description-text {
+        position: relative;
+        left: 4rem;
+        font-weight: 900;
+    }
+    .description-image {
+        top: 5rem;
+    }
+    .description-image img {
+        height: 128%;
+        width: 100%;
+    }
+}

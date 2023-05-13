@@ -1,0 +1,17 @@
+{% load static%}
+
+<li class="card-noticia">
+  <div class="card-noticia-imagem">
+    <img src={% static noticia.imagem %} alt="">
+  </div>
+  <div class="card-noticia-descricao">
+    <h2>{{ noticia.titulo }}</h2>
+    <p>
+      {{ noticia.descricao }}
+    </p>
+  </div>
+  <div class="card-date">
+    <p>{{ noticia.tempo }}</p>
+    <p>{{ noticia.data }} </p>
+  </div>
+</li>

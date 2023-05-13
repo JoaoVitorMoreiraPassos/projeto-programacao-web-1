@@ -1,0 +1,6 @@
+@media screen and (max-width: 1200px) {
+    .description-image img {
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,219 @@
+* {
+    font-family: var(--font-headings);
+    font-weight: 100;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    position: relative;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 1rem;
+    box-shadow: -1px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section {
+    position: absolute;
+    height: 30rem;
+    width: 25rem;
+    transition: all 1s ease;
+}
+
+.create-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 25rem;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+    border-radius: 0rem 1rem 1rem 0rem;
+    transition: all .8s ease
+}
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 25rem;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: -1;
+    border-radius: 0rem 1rem 1rem 0rem;
+    transition: all .8s ease
+}
+
+.welcome-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.hello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 1rem;
+    width: 25rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+form {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 70%;
+    height: 2rem;
+    border-radius: 10rem;
+    padding: 0 1rem;
+    outline: none;
+    background: #DFD4D4;
+    border: 2px solid #B7B5B5;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 100;
+}
+
+input::placeholder {
+    color: var(--background-pattern);
+}
+
+input:focus {
+    border: 1px solid orange;
+    background-color: #fff;
+}
+
+.confirm-button {
+    width: 50%;
+    height: 2.3rem;
+    border-radius: 10rem;
+    padding: 0 1rem;
+    outline: none;
+    border: none;
+    background: var(--background-pattern);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+.div-ou {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+}
+
+.horizontal-line {
+    width: 35%;
+    height: 1px;
+    background-color: #000;
+}
+
+.icons {
+
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    padding: 0 1rem;
+
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--background-pattern);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section-logo i {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch-signup,
+.switch-signin {
+    width: 8rem;
+    height: 2rem;
+    color: #fff;
+    background: var(--background-pattern);
+    border: 1px solid #fff;
+    font-size: 1.2rem;
+    border-radius: 10rem;
+    /* font-weight: 600; */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-red {
+    background-color: var(--background-pattern);
+}
+
+.move1 {
+    transform: translateX(25rem);
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.move2 {
+    transform: translateX(-25rem);
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.hidden {
+    z-index: -1;
+}
+
+.show {
+    z-index: 1;
+}
+
+h1 {
+    transition: all 0.2s ease
+}

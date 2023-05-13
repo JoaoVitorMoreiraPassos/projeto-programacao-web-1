@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="dev-card">
+
+
+    <img src={% static  dev.way %} alt="">
+
+    <div class="dev-infos">
+
+        <h4>{{ dev.nome }}</h4>
+
+        <p>
+            Cursando Sistemas de Informação na Universidade Federal do Piauí
+        </p>
+        {% if dev.linkedin is not False %}
+            <a href={{ dev.linkedin }}><i class="fab fa-linkedin"></i></a>
+        {% else %}
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        {% endif %}
+    </div>
+
+</div>

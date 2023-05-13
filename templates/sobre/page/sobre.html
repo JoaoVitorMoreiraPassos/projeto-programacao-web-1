@@ -1,0 +1,40 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {%include "bases/partials/head.html"%}
+        <link rel="stylesheet" href={% static 'sobre/css/minw1201px.css' %}>
+        <link rel="stylesheet" href={% static 'sobre/css/maxw1200px.css' %}>
+        <link rel="stylesheet" href={% static 'sobre/css/maxw998px.css' %}>
+        <link rel="stylesheet" href={% static 'sobre/css/maxw798px.css' %}>
+        <title>Sobre</title>
+    </head>
+    <body>
+        <div class="header-container">
+            {%include "bases/partials/header.html"%}
+            <div class="trapezoid">
+            </div>
+            <div class="description-container">
+                {%include "sobre/partials/description.html"%}
+            </div>
+        </div>
+        {% include "bases/partials/menu.html" %}
+        <div id="main_container">
+        <section class="devs-container">
+                <h1>Quem Somos</h1>
+                <div class="dev-cards">
+                    {% for dev in devs %}
+                        {%include "sobre/partials/devs_card.html"%}
+                    {% if dev.last is not True%}
+                        <div class="separator"></div>
+                    {% endif%}
+                    {% endfor %}
+                </div>
+        </section>
+        </div>
+
+        {%include "bases/partials/footer.html"%}
+        
+    </body>
+</html>

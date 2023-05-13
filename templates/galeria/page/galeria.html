@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "bases/partials/head.html" %}
+    <link rel="stylesheet" href={% static 'galeria/css/minw1201px.css' %}>
+
+    <title>Ufpi Noticias | Galeria</title>
+</head>
+
+<body>
+    <div class="header-container">
+        {%include "bases/partials/header.html"%}
+    </div>
+    {% include "bases/partials/menu.html" %}
+    <div id="main_container" class="container">
+        <h1>Galeria</h1>
+        <div class="images-container">
+            {% for image in images %}
+            <div class="image-container">
+                <img src= {% static image  %} alt="">
+                <a href="#"> saiba mais </a>
+            </div>
+            {% endfor %}    
+        </div>
+    </div>
+    {% include "bases/partials/footer.html" %}
+</body>
+
+</html>

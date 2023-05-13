@@ -1,3 +1,16 @@
+if (!localStorage.getItem("cookiesAccepted")) {
+    let cookieMessage = document.getElementById('cookie-notification');
+    let closeCookie = document.getElementById('cookie-notification-close');
+
+    cookieMessage.style.display = 'block';
+    closeCookie.addEventListener("click", function (e) {
+        e.preventDefault();
+        localStorage.setItem("cookiesAccepted", true);
+
+        cookieMessage.style.display = 'none';
+    });
+}
+
 try {
     document.getElementById("button-open-menu").addEventListener("click", () => {
         document.getElementById("button-open-menu").style.display = "none";
@@ -5,7 +18,7 @@ try {
         document.getElementById("menu-mobile").style.width = "100%";
         document.getElementById("main_container").style.display = "none";
     })
-} catch { alert("error") }
+} catch { console.log("Não foi possível abrir o menu") }
 document.getElementById("close-mobile-menu").addEventListener("click", () => {
     document.getElementById("menu-mobile").style.width = "0vh";
     document.getElementById("main_container").style.display = "flex";
@@ -27,7 +40,7 @@ try {
             });
         }
     })
-} catch { }
+} catch { console.log("error") }
 
 try {
     document.getElementById("move-scroll-left").addEventListener("click", () => {
@@ -42,7 +55,7 @@ try {
             document.getElementById("cards-container").scrollLeft = 0;
         }
     })
-} catch { }
+} catch { console.log("error") }
 
 try {
     document.getElementById("cards-container").addEventListener("scroll", () => {
@@ -59,4 +72,5 @@ try {
             document.getElementById("move-scroll-left").classList.add("move-disabled");
         }
     })
-} catch { }
+} catch { console.log("error") }
+

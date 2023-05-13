@@ -1,0 +1,59 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {%include "bases/partials/head.html"%}
+        <link rel="stylesheet" href={% static 'nae/css/minw1201px.css' %}>
+        <link rel="stylesheet" href={% static 'nae/css/maxw1200px.css' %}>
+        <link rel="stylesheet" href={% static 'nae/css/maxw998px.css' %}>
+        <link rel="stylesheet" href={% static 'nae/css/maxw750px.css' %}>
+        <title>NAE</title>
+    </head>
+    <body>
+        <div class="header-container">
+            {%include "bases/partials/header.html"%}
+            <div class="trapezoid">
+            </div>
+            <div class="description-container">
+                {%include "nae/partials/description.html"%}
+            </div>
+        </div>
+        {% include "bases/partials/menu.html" %}
+        <div id="main_container">
+            <section id="main_notices" class="main-noticias">
+                <div class="notices-header">
+                    <h1 class="titulo-noticias">Principais notícias</h1>
+                    <div class="duvidas-pesquisa">
+                        <input type="text" name="duvida" id="duvida" class="duvida-input" placeholder="Pesquisar">
+                        <button class="duvida-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="move-scroll-container">
+                    <button id="move-scroll-left" class="move-scroll-left move-disabled">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="move-scroll-right" class="move-scroll-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <ul class="cards-container " id="cards-container">
+                    {% for noticia in noticias %}
+                        {%include "home/partials/cards.html"%}
+                        {% if noticia.last is not True %}
+                            <li>
+                                <div class="separator">
+                                    <div></div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %} 
+                </ul>
+            </section>
+        </div>
+
+        {%include "bases/partials/footer.html"%}
+    </body>
+</html>

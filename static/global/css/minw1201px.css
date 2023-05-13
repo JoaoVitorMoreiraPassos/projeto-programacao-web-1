@@ -1,5 +1,5 @@
 :root {
-    --lvl1: #fff;
+    --lvl1: #ffffff;
     --lvl2: #276c65;
     --lvl3: #276c65;
     --lvl4: #c6d6d6;
@@ -10,13 +10,13 @@
     --font-headings: 'Fredoka One';
     --font-pattern: 'Inter';
     --font-cardapio: 'JetBrains Mono';
-    --font-color-1: $111;
+    --font-color-1: #111;
     --font-primary: sans-serif;
     --spacing-gutter-large: 4rem;
 }
 
 body {
-    background-color: var(--lvl1);
+    background: var(--lvl1);
     font-family: var(--font-pattern);
     font-size: 1.2rem;
     line-height: 1.5;
@@ -46,7 +46,7 @@ i {
 .button-open-menu__icon__line {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background: #fff;
     margin: 0.2rem 0;
 }
 
@@ -62,7 +62,6 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--lvl1);
     color: var(--lvl1);
     overflow: hidden;
 }
@@ -83,13 +82,12 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    flex: row;
+    flex-direction: row;
     width: 100%;
     height: 4.2rem;
     align-items: center;
     padding: 0rem 0rem 0rem 0rem;
     justify-content: space-evenly;
-    /* background: transparent; */
     z-index: 9;
 }
 
@@ -129,7 +127,7 @@ header {
 .logo-box-down {
     width: 90%;
     height: 1px;
-    background-color: #fff;
+    background: #fff;
 }
 
 .logo-container i {
@@ -184,7 +182,7 @@ nav {
     border-left: 1.5px solid #fff;
 }
 
-.nav-contato {
+.nav-galeria {
     border-right: 1.5px solid #fff;
 }
 
@@ -247,7 +245,7 @@ nav {
     outline: none;
     width: 3rem;
     height: 3rem;
-    background-color: var(--background-pattern);
+    background: var(--background-pattern);
     transition: all 300ms ease-in-out;
 }
 
@@ -256,12 +254,12 @@ nav {
 }
 
 .move-scroll-left:hover {
-    background-color: var(--lvl3);
+    background: var(--lvl3);
     transform: scale(1.1);
 }
 
 .move-scroll-right:hover {
-    background-color: var(--lvl3);
+    background: var(--lvl3);
     transform: scale(1.1);
 }
 
@@ -283,7 +281,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: var(--background-pattern);
+    background: var(--background-pattern);
     height: 14rem;
 }
 
