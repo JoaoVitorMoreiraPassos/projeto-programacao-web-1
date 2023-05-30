@@ -11,17 +11,18 @@
         <title>Sobre</title>
     </head>
     <body>
+        {% include "home/partials/cookie.html" %}
         <div class="header-container">
             {%include "bases/partials/header.html"%}
-            <div class="trapezoid">
-            </div>
-            <div class="description-container">
-                {%include "sobre/partials/description.html"%}
-            </div>
         </div>
         {% include "bases/partials/menu.html" %}
         <div id="main_container">
-        <section class="devs-container">
+            <div class="trapezoid-box">
+                <div class="description-container">
+                    {%include "sobre/partials/description.html"%}
+                </div>
+            </div>
+            <section class="devs-container">
                 <h1>Quem Somos</h1>
                 <div class="dev-cards">
                     {% for dev in devs %}

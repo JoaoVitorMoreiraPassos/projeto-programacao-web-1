@@ -19,7 +19,7 @@ input::placeholder {
     height: 35rem;
     background-color: transparent;
     padding: 1rem 0;
-    border-bottom: 1px solid #111;
+    color: #fff;
 }
 
 .pesquisa-container {
@@ -212,6 +212,10 @@ input::placeholder {
 
 .form-description:focus {
     border: 1px solid orange;
+}
+
+textarea {
+    resize: none;
 }
 
 textarea::placeholder {

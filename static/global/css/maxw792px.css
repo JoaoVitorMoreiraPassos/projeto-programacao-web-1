@@ -1,15 +1,22 @@
 @media screen and (max-width: 792px) {
+    .trapezoid-box {
+        height: 55rem;
+    }
+
     .header-container {
         width: 100%;
     }
+
     .logo-container {
         width: 100%;
         align-items: center;
     }
+
     .logo-container a {
         width: 100%;
         align-items: center;
     }
+
     .logo-box-up {
         width: 35%;
         display: flex;
@@ -17,15 +24,18 @@
         justify-content: center;
         font-size: 1rem;
     }
+
     .logo-box-up i {
         /* display: block; */
         width: 20%;
         justify-content: center;
     }
+
     .logo-box-up h2 {
         width: 80%;
         justify-content: center;
     }
+
     .trapezoid {
         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
     }
@@ -36,6 +46,7 @@
         width: 100%;
         align-items: center;
     }
+
     .logo-box-up {
         width: 35%;
         display: flex;
@@ -43,12 +54,14 @@
         justify-content: center;
         font-size: 1rem;
     }
+
     .logo-box-up i {
         width: 5%;
         justify-content: center;
         margin-right: 3rem;
         font-size: 1.5rem;
     }
+
     .logo-box-up h2 {
         width: 95%;
         justify-content: center;

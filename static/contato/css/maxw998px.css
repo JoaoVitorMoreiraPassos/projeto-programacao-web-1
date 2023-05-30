@@ -3,4 +3,13 @@
         margin-top: 7rem;
         height: 43rem;
     }
+
+    .duvida-image {
+        height: 13rem;
+    }
+
+    .duvida-image img {
+        width: 332px;
+        height: 490px;
+    }
 }

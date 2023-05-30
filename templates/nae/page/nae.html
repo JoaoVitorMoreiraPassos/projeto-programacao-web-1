@@ -11,16 +11,17 @@
         <title>NAE</title>
     </head>
     <body>
+        {% include "home/partials/cookie.html" %}
         <div class="header-container">
             {%include "bases/partials/header.html"%}
-            <div class="trapezoid">
-            </div>
-            <div class="description-container">
-                {%include "nae/partials/description.html"%}
-            </div>
         </div>
         {% include "bases/partials/menu.html" %}
         <div id="main_container">
+            <div class="trapezoid-box">
+                <div class="description-container">
+                    {%include "nae/partials/description.html"%}
+                </div>
+            </div>
             <section id="main_notices" class="main-noticias">
                 <div class="notices-header">
                     <h1 class="titulo-noticias">Principais notícias</h1>

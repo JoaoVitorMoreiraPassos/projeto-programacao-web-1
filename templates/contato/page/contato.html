@@ -14,16 +14,17 @@
 </head>
 
 <body>
+    {% include "home/partials/cookie.html" %}
     <div class="header-container">
-        {%include "bases/partials/header.html"%}
-        <div class="trapezoid">
-        </div>
-        <div class="duvidas-container">
-            {%include "contato/partials/duvidas.html"%}
-        </div>
+        {%include "bases/partials/header.html"%}        
     </div>
     {% include "bases/partials/menu.html" %}
     <div id="main_container">
+        <div class="trapezoid-box">
+            <div class="duvidas-container">
+                {%include "contato/partials/duvidas.html"%}
+            </div>
+        </div>
         {%include "contato/partials/formulario.html" %}
     </div>
 

@@ -9,11 +9,14 @@
 </head>
 
 <body>
-    <div class="header-container">
-        {%include "bases/partials/header.html"%}
-    </div>
+    {% include "home/partials/cookie.html" %}
     {% include "bases/partials/menu.html" %}
     <div id="main_container" class="container">
+        <div class="trapezoid-box">
+            <div class="header-container">
+                {%include "bases/partials/header.html"%}
+            </div>
+        </div>
         <div class="titulo">
             <h1>{{ noticia.titulo }}</h1>
         </div>

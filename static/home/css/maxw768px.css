@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px) {
+    .cardapio-container {
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+    }
+
+    .cardapio-descricao {
+        position: relative;
+        left: -2rem;
+        width: 15rem;
+    }
+
+    .cardapio-descricao-items {
+        position: relative;
+        left: -1rem
+    }
+
+    .cardapio-imagem {
+        height: auto;
+        padding-top: 0;
+    }
+
+    .cardapio-imagem img {
+        width: 250px;
+        height: 250px;
+    }
+}
