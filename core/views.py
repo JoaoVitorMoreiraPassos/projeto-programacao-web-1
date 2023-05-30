@@ -3,6 +3,19 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
+    cardapio = {
+        "refeicao": "Almoço",
+        "nome": "Feijoada",
+        "ingredientes": [
+            "Feijão",
+            "Carne de Porco",
+            "Arroz",
+            "Farofa",
+        ],
+        "imagem": {
+            "url": "static/home/svg/Panela-de-Barro-Feijoada-PNG 1.svg",
+        },
+    }
     noticias = [
         {
             "titulo": "Nutrição UFPI",
@@ -34,7 +47,11 @@ aprendizados.""",
         },
     ]
 
-    return render(request, "home/page/home.html", context={"noticias": noticias})
+    return render(
+        request,
+        "home/page/home.html",
+        context={"noticias": noticias, "cardapio": cardapio},
+    )
 
 
 def contato(request):
