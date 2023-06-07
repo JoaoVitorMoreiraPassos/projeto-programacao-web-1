@@ -1,10 +1,10 @@
 {%load static%}
 <section class="cardapio-descricao">
-    <h1>{{cardapio.refeicao}} de hoje:</h1>
+    <h1>{{cardapio.meal}} de hoje:</h1>
     <div class="cardapio-descricao-items" style="background: url({%static 'home/svg/Vector.svg'%}); background-repeat: no-repeat">
-        <h3>{{cardapio.nome}}:</h3>
+        <h3>{{cardapio.title}}:</h3>
         <ul>
-            {% for item in cardapio.ingredientes%}
+            {% for item in cardapio.ingredientes %}
             <li>{{item}}</li>
             {% endfor %}
         </ul>

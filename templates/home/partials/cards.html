@@ -1,14 +1,14 @@
 {% load static %}
 <li class="card-noticia">
     <div class="card-noticia-imagem">
-        <img src={% static noticia.imagem %} alt="">
-    </div>
+        <img src={% static noticia.image %} alt="noticia.category.image_pattern">
+    </div>s
     <div class="card-noticia-descricao">
-        <h2>{{ noticia.titulo }}</h2>
-        <p>{{ noticia.descricao }}</p>
+        <h2>{{ noticia.title }}</h2>
+        <p>{{ noticia.content }}</p>
     </div>
     <div class="card-date">
-        <p>{{ noticia.tempo }}</p>
-        <p>{{ noticia.data }} </p>
+        <p>{{ noticia.time_pass }}</p>
+        <p>{{ noticia.date }} </p>
     </div>
 </li>

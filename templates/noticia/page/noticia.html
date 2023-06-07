@@ -26,18 +26,18 @@
             </p>
             |
             <p>
-                {{ noticia.data }}
+                {{ noticia.date }}
             </p>
             |
             <p>
-                {{ noticia.categoria }}
+                {{ noticia.category }}
             </p>
         </div>
         <div class="imagem">
-            <img src="{% static noticia.imagem %}" alt="">
+            <img src="{% static noticia.image %}" alt="">
         </div>
         <div class="conteudo">
-            {% for paragrafo in noticia.conteudo %}
+            {% for paragrafo in noticia.content %}
             <p>
                 {{ paragrafo }}
             </p>
@@ -51,11 +51,11 @@
                 <div class="comentario">
                     <ul>
                         <li>
-                            <p>{{ comentario.data }}</p>
-                            <p>{{ comentario.nome }} disse:</p>
+                            <p>{{ comentario.date }}</p>
+                            <p>{{ comentario.user.nome }} disse:</p>
                             <ul>
                                 <li>
-                                    - {{ comentario.conteudo }}
+                                    - {{ comentario.content }}
                                 </li>
                             </ul>
                         </li>
