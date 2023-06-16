@@ -2,14 +2,16 @@
 <section class="cardapio-descricao">
     <h1>{{cardapio.meal}} de hoje:</h1>
     <div class="cardapio-descricao-items" style="background: url({%static 'home/svg/Vector.svg'%}); background-repeat: no-repeat">
-        <h3>{{cardapio.title}}:</h3>
+        <h3>{{cardapio.title}}</h3>
         <ul>
-            {% for item in cardapio.ingredientes %}
+            {% for item in cardapio.recipe %}
             <li>{{item}}</li>
             {% endfor %}
         </ul>
     </div>
 </section>
 <div class="cardapio-imagem">
-    <img src="{{cardapio.imagem.url}}" alt="">
+    {% if cardapio.imagem %}
+        <img src="{{cardapio.imagem.url}}" alt="">
+    {% endif%}
 </div>

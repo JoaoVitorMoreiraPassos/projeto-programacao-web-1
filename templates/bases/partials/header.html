@@ -11,14 +11,17 @@
 
     <nav class="nav-container">
         <ul>
-            <li class="nav-home"><a href="/">Home</a></li>
-            <li class="nav-NAE"><a href="/nae/">NAE</a></li>
-            <li class="nav-sobre"><a href="/sobre/">Sobre</a></li>
-            <li class="nav-contato"><a href="/contato/">Contato</a></li>
-            <li class="nav-galeria"><a href="/galeria/">Galeria</a></li>
+            <li class="nav-home"><a class="nav-item" href="/">Home</a></li>
+            <li class="nav-NAE"><a class="nav-item" href="/nae/">NAE</a></li>
+            <li class="nav-sobre"><a class="nav-item" href="/sobre/">Sobre</a></li>
+            <li class="nav-contato"><a class="nav-item" href="/contato/">Contato</a></li>
         </ul>
         <div class="nav-user">
-            <button class="nav-user-button">Olá Usuário</button>
+            {% if user %}
+            <button class="nav-user-button">Olá {{ user.first_name }}</button>
+            {% else %}
+            <button class="nav-user-button">Entrar</button>
+            {% endif %}
             <i class="fas fa-user"></i>
         </div>
     </nav>

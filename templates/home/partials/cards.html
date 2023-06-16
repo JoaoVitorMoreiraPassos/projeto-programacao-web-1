@@ -1,8 +1,12 @@
 {% load static %}
 <li class="card-noticia">
     <div class="card-noticia-imagem">
-        <img src={% static noticia.image %} alt="noticia.category.image_pattern">
-    </div>s
+        {% if not noticia.image %}
+        <img src="{{noticia.category.image_pattern.url}}" alt="">
+        {% else %}
+        <img src="{{noticia.image.url}}" alt="">\
+        {% endif %}
+    </div>
     <div class="card-noticia-descricao">
         <h2>{{ noticia.title }}</h2>
         <p>{{ noticia.content }}</p>
