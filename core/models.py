@@ -18,7 +18,7 @@ class Profile(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    image_pattern = models.ImageField("/category/", blank=True, null=True)
+    image_pattern = models.ImageField(upload_to="category/", blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -58,7 +58,8 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    recipe = models.ManyToManyField(Recipe, related_name="ingredients")
+    # ONE INGREDIENT CAN BE IN MANY RECIPES
+    recipe = models.ManyToManyField(Recipe)
 
     def __str__(self):
         return self.name
