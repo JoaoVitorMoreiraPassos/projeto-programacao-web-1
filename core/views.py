@@ -1,52 +1,32 @@
 from django.shortcuts import render
+from .models import Profile, Category, Notice, Comment, Recipe, Ingredient
+from datetime import datetime
 
 
 # Create your views here.
 def home(request):
-    cardapio = {
-        "refeicao": "Almoço",
-        "nome": "Feijoada",
-        "ingredientes": [
-            "Feijão",
-            "Carne de Porco",
-            "Arroz",
-            "Farofa",
-        ],
-        "imagem": {
-            "url": "static/home/svg/Panela-de-Barro-Feijoada-PNG 1.svg",
-        },
-    }
-    noticias = [
-        {
-            "titulo": "Nutrição UFPI",
-            "imagem": "home/img/image 2.png",
-            "descricao": """Curso de Nutrição abre campanha para ajudar os
-estudantes a se alimentaram melhor no seu dia a dia.""",
-            "tempo": "Postado há 16 horas",
-            "data": "10/01/2023",
-            "last": False,
-        },
-        {
-            "titulo": "Sistemas de Informação UFPI",
-            "imagem": "home/img/image 1.png",
-            "descricao": """Professores do curso de Sistemas de Informação,
-abrem vagas com bolsas para projetos de iniciação Científica e Tecnológica.""",
-            "tempo": "Postado há 2 dias",
-            "data": "08/01/2023",
-            "last": False,
-        },
-        {
-            "titulo": "Medicina UFPI",
-            "imagem": "home/img/image 3.png",
-            "descricao": """Curso de medicina abre 20 vagas de estágio em
-hospitais e postos de saúde para os alunos poderem vivenciar na prática seus
-aprendizados.""",
-            "tempo": "Postado há 6 dias",
-            "data": "04/01/2023",
-            "last": True,
-        },
-    ]
-
+    noticias = Notice.objects.all().order_by("-date_time")
+    cardapio = Recipe.objects.all()[0]
+    cardapio.recipe = Ingredient.objects.filter(recipe=cardapio)
+    cardapio.meal = "Almoço"
+    for noticia in noticias:
+        noticia.time_pass = datetime.now() - datetime.strptime(
+            str(noticia.date_time).split(".")[0], "%Y-%m-%d %H:%M:%S"
+        )
+        if noticia.time_pass.days > 0:
+            noticia.time_pass = f"Publicado há {noticia.time_pass.days} dias"
+        elif noticia.time_pass.seconds // 3600 > 0:
+            noticia.time_pass = (
+                f"Publicado há {noticia.time_pass.seconds // 3600} horas"
+            )
+        elif noticia.time_pass.seconds // 60 > 0:
+            noticia.time_pass = (
+                f"Publicado há {noticia.time_pass.seconds // 60} minutos"
+            )
+        else:
+            noticia.time_pass = f"Publicado há {noticia.time_pass.seconds} segundos"
+        if noticia == noticias.last():
+            noticia.last = True
     return render(
         request,
         "home/page/home.html",
@@ -63,38 +43,26 @@ def login(request):
 
 
 def nae(request):
-    noticias = [
-        {
-            "titulo": "Abertura EditalBolsa BAE",
-            "imagem": "nae/img/image 2.png",
-            "descricao": """Bolsa de Auxílio Estudantil (BAE),
-foi aberta no ano de 2023 para que novos alunos possam concorrer
-a bolsa no valor de 400 reais.""",
-            "tempo": "Publicado há 2 dias",
-            "data": "09/01/2023",
-            "last": False,
-        },
-        {
-            "titulo": "Segunda Chamada Auxílio Residencial",
-            "imagem": "nae/img/image 2.png",
-            "descricao": """Mais 20 alunos alunos da lista de espera do auxílio
-residencia foram chamados nessa Quarta feira para receberem a bolsa de 400 
-reais.""",
-            "tempo": "Publicado há 3 horas",
-            "data": "11/01/2023",
-            "last": False,
-        },
-        {
-            "titulo": "NAE promove evento musical",
-            "imagem": "nae/img/image 2.png",
-            "descricao": """O NAE em conjunto com alunos de vários cursos da 
-universidade, realizaram um evento musical no Restaurante Universitáio nesta
-sexta feira.""",
-            "tempo": "Publicado há 5 dias",
-            "data": "06/01/2023",
-            "last": False,
-        },
-    ]
+    noticias = Notice.objects.filter(category=Category.objects.get(name="NAE"))
+
+    for noticia in noticias:
+        noticia.time_pass = datetime.now() - datetime.strptime(
+            str(noticia.date_time).split(".")[0], "%Y-%m-%d %H:%M:%S"
+        )
+        if noticia.time_pass.days > 0:
+            noticia.time_pass = f"Publicado há {noticia.time_pass.days} dias"
+        elif noticia.time_pass.seconds // 3600 > 0:
+            noticia.time_pass = (
+                f"Publicado há {noticia.time_pass.seconds // 3600} horas"
+            )
+        elif noticia.time_pass.seconds // 60 > 0:
+            noticia.time_pass = (
+                f"Publicado há {noticia.time_pass.seconds // 60} minutos"
+            )
+        else:
+            noticia.time_pass = f"Publicado há {noticia.time_pass.seconds} segundos"
+        if noticia == noticias.last():
+            noticia.last = True
 
     return render(request, "nae/page/nae.html", context={"noticias": noticias})
 
