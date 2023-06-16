@@ -6,7 +6,6 @@ if (!localStorage.getItem("cookiesAccepted")) {
     closeCookie.addEventListener("click", function (e) {
         e.preventDefault();
         localStorage.setItem("cookiesAccepted", true);
-
         cookieMessage.style.display = 'none';
     });
 }
@@ -74,3 +73,80 @@ try {
     })
 } catch { console.log("error") }
 
+
+document.querySelector(".nav-home").addEventListener("mousemove", () => {
+    document.querySelector(".nav-NAE").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-NAE").style.border = "none";
+    document.querySelector(".nav-contato").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-sobre").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-sobre").style.border = "none";
+
+    document.querySelector(".nav-home").style.backgroundColor = "#276c65";
+    document.querySelector(".nav-home").style.borderRadius = "1rem";
+    document.querySelector(".nav-home").style.borderRight = "1.5px solid #fff";
+})
+
+document.querySelector(".nav-home").addEventListener("mouseout", () => {
+    document.querySelector(".nav-home").style = "";
+    document.querySelector(".nav-NAE").style = "";
+    document.querySelector(".nav-contato").style = "";
+    document.querySelector(".nav-sobre").style = "";
+})
+
+document.querySelector(".nav-NAE").addEventListener("mousemove", () => {
+    document.querySelector(".nav-home").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-home").style.border = "none";
+    document.querySelector(".nav-contato").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-sobre").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-sobre").style.border = "none";
+
+    document.querySelector(".nav-NAE").style.backgroundColor = "#276c65";
+    document.querySelector(".nav-NAE").style.borderRadius = "1rem";
+    document.querySelector(".nav-NAE").style.borderRight = "1.5px solid #fff";
+})
+
+document.querySelector(".nav-NAE").addEventListener("mouseout", () => {
+    document.querySelector(".nav-home").style = "";
+    document.querySelector(".nav-NAE").style = "";
+    document.querySelector(".nav-contato").style = "";
+    document.querySelector(".nav-sobre").style = "";
+})
+
+document.querySelector(".nav-contato").addEventListener("mousemove", () => {
+    document.querySelector(".nav-home").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-home").style.border = "none";
+    document.querySelector(".nav-NAE").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-NAE").style.border = "none";
+    document.querySelector(".nav-sobre").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-sobre").style.border = "none";
+
+    document.querySelector(".nav-contato").style.backgroundColor = "#276c65";
+    document.querySelector(".nav-contato").style.borderRadius = "1rem";
+    document.querySelector(".nav-contato").style.borderRight = "1.5px solid #fff";
+})
+
+document.querySelector(".nav-contato").addEventListener("mouseout", () => {
+    document.querySelector(".nav-home").style = "";
+    document.querySelector(".nav-NAE").style = "";
+    document.querySelector(".nav-contato").style = "";
+    document.querySelector(".nav-sobre").style = "";
+})
+
+document.querySelector(".nav-sobre").addEventListener("mousemove", () => {
+    document.querySelector(".nav-home").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-home").style.border = "none";
+    document.querySelector(".nav-NAE").style.backgroundColor = "#1693a5";
+    document.querySelector(".nav-NAE").style.border = "none";
+    document.querySelector(".nav-contato").style.backgroundColor = "#1693a5";
+
+    document.querySelector(".nav-sobre").style.backgroundColor = "#276c65";
+    document.querySelector(".nav-sobre").style.borderRadius = "1rem";
+    document.querySelector(".nav-sobre").style.borderRight = "1.5px solid #fff";
+})
+
+document.querySelector(".nav-sobre").addEventListener("mouseout", () => {
+    document.querySelector(".nav-home").style = "";
+    document.querySelector(".nav-NAE").style = "";
+    document.querySelector(".nav-contato").style = "";
+    document.querySelector(".nav-sobre").style = "";
+})

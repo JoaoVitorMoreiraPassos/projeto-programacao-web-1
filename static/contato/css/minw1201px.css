@@ -1,6 +1,8 @@
 .nav-contato {
-    border: 1.5px solid #fff;
+    background: var(--lvl3);
     border-radius: 1rem;
+    border-right: 1.5px solid #fff;
+    ;
 }
 
 input::placeholder {
@@ -15,7 +17,7 @@ input::placeholder {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    width: 80%;
+    width: 90%;
     height: 35rem;
     background-color: transparent;
     padding: 1rem 0;
@@ -128,12 +130,14 @@ input::placeholder {
 }
 
 .form-container {
-    width: 30rem;
+    width: 90%;
     height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
 }
 
 .form {

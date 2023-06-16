@@ -1,6 +1,7 @@
 .nav-sobre {
-    border: 1.5px solid #fff;
+    background: var(--lvl3);
     border-radius: 1rem;
+    border-right: 1.5px solid #fff;
 }
 
 .description-container {

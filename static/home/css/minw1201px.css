@@ -1,6 +1,7 @@
 .nav-home {
-    border: 1.5px solid #fff;
+    background: var(--lvl3);
     border-radius: 1rem;
+    border-right: 1.5px solid #fff;
 }
 
 .cardapio-container {
@@ -48,7 +49,7 @@
 
 .cardapio-descricao-items h3 {
     height: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left: 2rem;
 }
 
@@ -66,9 +67,10 @@
 }
 
 .main-noticias {
+    border-top: 1px solid #111;
     padding-bottom: 2rem;
     border-bottom: 1px solid #111;
-    width: 80%;
+    width: 90%;
     height: 45rem;
     display: flex;
     flex-direction: column;
@@ -156,7 +158,7 @@
 }
 
 .card-noticia:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 0 10px #111;
 }
 

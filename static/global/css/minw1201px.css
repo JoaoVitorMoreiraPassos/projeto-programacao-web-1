@@ -73,7 +73,6 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-bottom: 1px solid #111;
 }
 
 .trapezoid-box::before {
@@ -84,7 +83,7 @@ i {
     width: 100%;
     height: auto;
     background: var(--background-pattern);
-    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 100%);
     z-index: -1;
 }
 
@@ -176,11 +175,6 @@ nav li a {
     color: #fff;
 }
 
-nav li:hover {
-    border: 1.5px solid #fff;
-    border-radius: 1rem;
-}
-
 nav {
     font-weight: bold;
     display: flex;
@@ -190,13 +184,15 @@ nav {
     max-width: 800px;
 }
 
-.nav-home {
-    border-left: 1.5px solid #fff;
-}
-
-.nav-galeria {
+.nav-contato {
     border-right: 1.5px solid #fff;
 }
+
+/* nav ul li:hover {
+    background: var(--lvl3);
+    border-radius: 1rem;
+    border-right: 1.5px solid #fff;
+} */
 
 .nav-user {
     margin-left: 1rem;

@@ -1,6 +1,7 @@
 .nav-NAE {
-    border: 1.5px solid#fff;
+    background: var(--lvl3);
     border-radius: 1rem;
+    border-right: 1.5px solid #fff;
 }
 
 .description-container {
@@ -53,22 +54,25 @@
 }
 
 .description-imagem {
-    height: 23rem;
+    margin-top: -5.5rem;
+    height: calc(730px - 66px);
+    width: 730px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .description-imagem img {
-    width: 680px;
-    height: calc(680px - 66px);
-    margin-top: 5.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .main-noticias {
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
+    border-top: 1px solid #111;
     border-bottom: 1px solid #111;
-    width: 80%;
+    width: 90%;
     height: 45rem;
     display: flex;
     flex-direction: column;
@@ -249,7 +253,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem
 }
 
 .card-noticia-descricao p {

@@ -4,7 +4,6 @@
     }
 
     .description-container {
-        /* margin-top: 3rem; */
         flex-direction: column;
         justify-content: flex-start;
         width: 80%;
@@ -41,12 +40,10 @@
     }
 
     .description-imagem {
-        display: none;
-    }
-
-    .description-imagem img {
-        width: 550px;
-        height: calc(550px - 66px);
+        /* display: none; */
+        margin-top: -2rem;
+        height: calc(350px - 66px);
+        width: 350px;
     }
 
     .notices-header {

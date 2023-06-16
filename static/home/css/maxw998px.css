@@ -33,8 +33,11 @@
     }
 
     .cardapio-descricao-items h3 {
-        font-size: 1.7rem;
+        font-size: auto;
         padding-left: 1.7rem;
+        padding-right: 1.7rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .cardapio-imagem img {
