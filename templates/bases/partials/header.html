@@ -1,6 +1,6 @@
 <header>
     <div class="logo-container">
-        <a href="#">
+        <a href="/">
             <div class="logo-box-up">
                 <i class="fas fa-book"></i>
                 <h2>INFO UFPI</h2>
@@ -17,10 +17,12 @@
             <li class="nav-contato"><a class="nav-item" href="/contato/">Contato</a></li>
         </ul>
         <div class="nav-user">
-            {% if user %}
+            {% if user.is_authenticated %}
             <button class="nav-user-button">Olá {{ user.first_name }}</button>
             {% else %}
-            <button class="nav-user-button">Entrar</button>
+            <form action="/login/" method="GET">
+                <button class="nav-user-button">Entrar</button>
+            </form>
             {% endif %}
             <i class="fas fa-user"></i>
         </div>

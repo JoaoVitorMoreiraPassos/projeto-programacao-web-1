@@ -1,6 +1,21 @@
 {% load static %}
 
 <div class="menu-mobile" id="menu-mobile">
+    {% if user.is_authenticated %}
+    <div class="menu-options__item">
+        <form action="/logout/" method="POST">
+            {% csrf_token %}
+            <button class="nav-user-button">Sair</button>
+        </form>
+    </div>
+    {% else %}
+
+    <div class="menu-options__item">
+        <form action="/login/" method="GET">
+            <button class="nav-user-button">Entrar</button>
+        </form>
+    </div>
+    {% endif %}
     <div class="menu-options">
         <div class="close-menu">
             <button class="close-mobile-menu" id="close-mobile-menu">
@@ -23,6 +38,7 @@
             <a href="/galeria/">Galeria</a>
         </div>
     </div>
+</div>
 </div>
 <div class="button-open-menu"></div>
 <div class="button-open-menu_icon" id="button-open-menu">

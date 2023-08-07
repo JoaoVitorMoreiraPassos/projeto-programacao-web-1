@@ -1,7 +1,8 @@
 @media screen and (max-width: 998px) {
     .cardapio-container {
         top: 0;
-        margin-top: 5rem;
+        margin-top: 2rem;
+        /* padding-left: 2rem; */
         flex-direction: row;
         justify-content: center;
         width: 100%;
@@ -33,7 +34,7 @@
     }
 
     .cardapio-descricao-items h3 {
-        font-size: auto;
+        font-size: 1rem;
         padding-left: 1.7rem;
         padding-right: 1.7rem;
         display: flex;

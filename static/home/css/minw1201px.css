@@ -49,7 +49,7 @@
 
 .cardapio-descricao-items h3 {
     height: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-left: 2rem;
 }
 
@@ -58,12 +58,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 5rem
+    padding-top: 5rem;
 }
 
 .cardapio-imagem img {
     width: 480px;
     height: 480px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 .main-noticias {
@@ -96,7 +99,7 @@
     grid-auto-columns: 1fr;
     padding: 1rem;
     width: 100%;
-    height: 30rem;
+    height: 35rem;
     overflow-x: scroll;
     scroll-behavior: smooth;
     transition: all 300ms ease-in-out;
@@ -128,7 +131,7 @@
     padding: 1rem 1rem;
     color: #111;
     width: 20rem;
-    height: 27rem;
+    height: 30rem;
     transition: all 300ms ease-in-out;
     margin: 0 0.5rem;
     border-radius: 1rem 1rem 1rem 1rem;
@@ -136,6 +139,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -178,7 +182,7 @@
 
 .card-noticia-descricao {
     width: 100%;
-    height: 12rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;

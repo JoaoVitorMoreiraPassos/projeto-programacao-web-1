@@ -1,10 +1,11 @@
 {% load static %}
 <li class="card-noticia">
+    <input type="hidden" value="{{noticia.slug}}" class="notice-slug">
     <div class="card-noticia-imagem">
         {% if not noticia.image %}
         <img src="{{noticia.category.image_pattern.url}}" alt="">
         {% else %}
-        <img src="{{noticia.image.url}}" alt="">\
+        <img src="{{noticia.image.url}}" alt="">
         {% endif %}
     </div>
     <div class="card-noticia-descricao">

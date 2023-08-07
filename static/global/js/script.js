@@ -17,7 +17,7 @@ try {
         document.getElementById("menu-mobile").style.width = "100%";
         document.getElementById("main_container").style.display = "none";
     })
-} catch { console.log("Não foi possível abrir o menu") }
+} catch { console.log("error") }
 document.getElementById("close-mobile-menu").addEventListener("click", () => {
     document.getElementById("menu-mobile").style.width = "0vh";
     document.getElementById("main_container").style.display = "flex";
@@ -59,7 +59,6 @@ try {
 try {
     document.getElementById("cards-container").addEventListener("scroll", () => {
         let scroll = document.getElementById("cards-container");
-        console.log(scroll.scrollWidth, scroll.scrollLeft, scroll.clientWidth);
         if (scroll.scrollWidth > scroll.scrollLeft + scroll.clientWidth + 10) {
             document.getElementById("move-scroll-right").classList.remove("move-disabled");
         } else {

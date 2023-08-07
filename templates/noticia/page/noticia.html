@@ -1,10 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href={% static 'noticia/css/minw1201px.css' %}>
     {% include "bases/partials/head.html" %}
+    <link rel="stylesheet" href={% static 'noticia/css/minw1201px.css' %}>
     <title>Ufpi Noticias | Noticia</title>
 </head>
 
@@ -12,59 +12,79 @@
     {% include "home/partials/cookie.html" %}
     {% include "bases/partials/menu.html" %}
     <div id="main_container" class="container">
-        <div class="trapezoid-box">
-            <div class="header-container">
-                {%include "bases/partials/header.html"%}
-            </div>
+        <div class="header-container">
+            {%include "bases/partials/header.html"%}
         </div>
         <div class="titulo">
-            <h1>{{ noticia.titulo }}</h1>
+            <h1>{{ noticia.title }}</h1>
         </div>
         <div class="postagem-infos">
             <p>
-                {{ noticia.autor }}
+                Autor(a): {{ noticia.user.first_name }} {{ noticia.user.last_name }}
             </p>
-            |
             <p>
-                {{ noticia.date }}
+                Data da publicação: {{ noticia.date }}
             </p>
-            |
             <p>
-                {{ noticia.category }}
+                Setor: {{ noticia.category }}
             </p>
         </div>
         <div class="imagem">
-            <img src="{% static noticia.image %}" alt="">
+            {% if noticia.image %}
+            <img src={{ noticia.category.image_pattern.url }} alt="">
+            {% else %}
+            <img src={{ noticia.category.image_pattern.url}} alt="">
+            {% endif %}
         </div>
         <div class="conteudo">
-            {% for paragrafo in noticia.content %}
             <p>
-                {{ paragrafo }}
+                {{ noticia.content }}
             </p>
-            {% endfor %}
         </div>
 
         <div class="comentarios-container">
             <div class="comentarios">
-                <h3>Comentários</h3>
-                {% for comentario in comentarios %}
-                <div class="comentario">
-                    <ul>
-                        <li>
-                            <p>{{ comentario.date }}</p>
-                            <p>{{ comentario.user.nome }} disse:</p>
-                            <ul>
-                                <li>
-                                    - {{ comentario.content }}
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                {% endfor %}
+                <h3>Comentários ( {{ comentarios|length }} )</h3>
+                {% if comentarios %}
+                    {% for comentario in comentarios %}
+                    <div class="comentario">
+                        <ul>
+                            <li>
+                                <p class="comment-time">{{ comentario.time_pass }}</p>
+                                <p>
+                                    {% if comentario.user != user%}
+                                    {{ comentario.user.first_name }}
+                                    {% else%} 
+                                    Você
+                                    {% endif %}
+                                    disse:
+                                 </p>
+                                    {% comment %} {% if comentario.childs %} {% endcomment %}
+                                    <ul>
+                                        <li>
+                                        
+                                        {{ comentario.content }}</p>
+                                        {% comment %} {% for child in comentario.childs %}
+                                        <p>{{ child.time_pass }}</p>
+                                        <p>{{ child.user.first_name }} disse :</p>
+                                        - {{ child.content }}
+                                        {% endfor %} {% endcomment %}
+                                    
+                                    </li>
+                                </ul>
+                                {% comment %} {% endif %} {% endcomment %}
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <p>Seja o primeiro a comentar</p>
+                {% endif %}
             </div>
-            <form method="POST" class="comentario-form">
-                <input type="text" name="comentario" id="comentario" placeholder="Seu comentario" required>
+            <form  method="POST" class="comentario-form">
+                {% csrf_token %}
+                <input type="text" name="comment" id="comentario" placeholder="Seu comentario" required>
                 <div class="comentario-form-button">
                     <button>Enviar</button>
                 </div>
@@ -73,6 +93,7 @@
 
     </div>
     {% include "bases/partials/footer.html" %}
+    <script src={% static 'noticia/js/script.js' %}></script>
 </body>
 
 </html>

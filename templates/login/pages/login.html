@@ -11,9 +11,55 @@
 </head>
 
 <body>
-    <div class="container">
-        <script src={% static 'login/js/init.js' %}></script>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="/login/create_profile/" method="POST">
+                {% csrf_token %}
+                <h1>Criar conta</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou utilize seu email para se cadastrar</span>
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/login/authentication/" method="POST">
+                {% csrf_token %}
+                <h1>Entrar</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email</span>
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Já possui uma conta?</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá! Novato?</h1>
+                    <p>Cadastre-se para desbloquear novas funcionalidades.</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src={% static 'login/js/init.js' %}></script>
     <script src={% static 'login/js/switch_mob.js' %}></script>
     <script src={% static 'login/js/script.js' %}></script>
 

@@ -1,0 +1,76 @@
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    background: var(--lvl6);
+    border-radius: 5px;
+}
+
+.inputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+}
+
+
+
+form input {
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus {
+    border: 1px solid #000;
+}
+
+form select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    background: #fff;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    background: var(--lvl2);
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--lvl4);
+    color: #111;
+}

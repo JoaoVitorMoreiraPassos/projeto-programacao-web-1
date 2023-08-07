@@ -1,0 +1,1 @@
+document.querySelector(".comentario-form").action = `/noticias/comment/${window.location.pathname.split("/")[2]}/`

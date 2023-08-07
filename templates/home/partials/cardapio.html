@@ -1,17 +1,22 @@
 {%load static%}
-<section class="cardapio-descricao">
-    <h1>{{cardapio.meal}} de hoje:</h1>
-    <div class="cardapio-descricao-items" style="background: url({%static 'home/svg/Vector.svg'%}); background-repeat: no-repeat">
-        <h3>{{cardapio.title}}</h3>
-        <ul>
-            {% for item in cardapio.recipe %}
-            <li>{{item}}</li>
-            {% endfor %}
-        </ul>
+{% if cardapio is not None %}
+    <section class="cardapio-descricao">
+        <h1>{{cardapio.meal}} de hoje:</h1>
+        <div class="cardapio-descricao-items"
+            style="background: url({%static 'home/svg/Vector.svg'%}); background-repeat: no-repeat">
+            <h3>{{cardapio.recipe.title|capfirst}}</h3>
+            <ul>
+                {% for item in cardapio.ingredients %}
+                <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <div class="cardapio-imagem">
+        {% if cardapio.recipe.image %}
+        <img src="{{cardapio.recipe.image.url}}" alt="">
+        {% endif %}
     </div>
-</section>
-<div class="cardapio-imagem">
-    {% if cardapio.imagem %}
-        <img src="{{cardapio.imagem.url}}" alt="">
-    {% endif%}
-</div>
+{% else %}
+        <h1 style="width: 100%; text-align: center"> Cárdapio não disponível!</h1>
+{% endif %}

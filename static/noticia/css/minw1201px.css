@@ -20,18 +20,25 @@
 
 .postagem-infos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.9rem
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.postagem-infos p {
+    padding: 0;
+    margin: 0;
 }
 
 .imagem {
     margin-bottom: 2rem;
     min-width: 100px;
-    max-width: 100%;
-    width: 80%;
+    max-width: 80%;
+    width: 60%;
+    height: auto;
 }
 
 .imagem img {
@@ -41,12 +48,20 @@
 }
 
 .conteudo {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo p {
     text-align: justify;
-    width: 80%;
+    width: 70%;
 }
 
 .comentarios-container {
-    width: 80%;
+    width: 100%;
     margin-top: 2rem;
 }
 
@@ -94,7 +109,6 @@
 }
 
 input {
-    width: 100%;
     height: 2.5rem;
     font-size: 1rem;
     border-radius: 10rem;
@@ -104,6 +118,7 @@ input {
     border: 2px solid #B7B5B5;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: 1;
 }
 
 input::placeholder {
@@ -115,8 +130,24 @@ input:focus {
     background-color: #fff;
 }
 
+.comentario {
+    width: 100%;
+}
+
+.comment-time {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.comentario ul {
+    width: 100%;
+}
+
+li {
+    font-size: 1rem;
+}
+
 .comentario-form-button {
-    width: 20%;
     height: 2.7rem;
     border-radius: 10rem;
     outline: none;
@@ -126,6 +157,7 @@ input:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #fff;
     cursor: pointer;
+    flex: .3;
 }
 
 .comentario-form-button button {
@@ -144,4 +176,11 @@ input:focus {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .comentarios-container {
+        width: 90%;
+        margin-top: 2rem;
+    }
 }

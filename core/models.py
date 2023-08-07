@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -33,16 +34,31 @@ class Notice(models.Model):
     image = models.ImageField(upload_to="notice/", blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    slug = models.SlugField(unique=True, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:  # Gera o slug apenas se ele não estiver definido
+            slug = slugify(self.title)
+            unique_slug = slug
+            num = 1
+            while Notice.objects.filter(slug=unique_slug).exists():
+                unique_slug = f"{slug}-{num}"
+                num += 1
+            self.slug = unique_slug
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
 
 
 class Comment(models.Model):
-    notice = models.ForeignKey(Notice, on_delete=models.CASCADE)
+    notice = models.ForeignKey(Notice, on_delete=models.CASCADE, blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField()
+    parent_comment = models.ForeignKey(
+        "self", on_delete=models.CASCADE, null=True, blank=True, related_name="replies"
+    )
 
     def __str__(self):
         return self.content[:10]
@@ -63,3 +79,12 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class RecipeDates(models.Model):
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    date = models.DateField()
+    meal = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f"{self.recipe} - {self.date} - {self.meal}"

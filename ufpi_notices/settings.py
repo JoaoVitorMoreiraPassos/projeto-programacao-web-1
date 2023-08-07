@@ -28,13 +28,7 @@ SECRET_KEY = get_key()
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "10.180.44.2",
-    "0.0.0.0",
-    "localhost",
-    "127.0.0.1",
-    "10.180.47.244",
-    "10.180.43.96",
-    "192.168.1.12",
+    "*",  # Para testes
 ]
 
 
@@ -114,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "pt-br"
 
 TIME_ZONE = "UTC"
 
